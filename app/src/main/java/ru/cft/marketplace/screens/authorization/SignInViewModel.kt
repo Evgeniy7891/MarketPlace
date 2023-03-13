@@ -4,10 +4,12 @@ import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ru.cft.domain.models.AccountModel
 import ru.cft.domain.usecases.InsertUseCase
 import ru.cft.domain.usecases.SearchEmailUseCase
+import ru.cft.marketplace.PROCCESING
 import ru.cft.marketplace.util.BaseViewModel
 
 class SignInViewModel(application: Application) : BaseViewModel(application) {
@@ -23,6 +25,8 @@ class SignInViewModel(application: Application) : BaseViewModel(application) {
         }
 
     fun searchEmail(email: String) = viewModelScope.launch(Dispatchers.IO) {
-        result.postValue(emailUseCase.invoke(email))
+        val answer = emailUseCase.invoke(email)
+        delay(PROCCESING)
+        result.postValue(answer)
     }
 }

@@ -26,13 +26,18 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     private fun initInsert() {
         with(binding) {
             btnLogin.setOnClickListener {
+                progressBar2.isVisible = true
                 val name = etFirstName.text.toString()
                 val password = etPassword.text.toString()
                 viewModel.searchAccount(name, password)
                 viewModel.result.observe(viewLifecycleOwner) { result ->
                     if(result == false) {
                         Toast.makeText(requireContext(), "User name or password error", Toast.LENGTH_SHORT).show()
-                    } else  findNavControllerSafely(R.id.loginFragment)?.navigate(R.id.action_loginFragment_to_homeFragment)
+                        progressBar2.isVisible = false
+                    } else if (result == true) {
+                        findNavControllerSafely(R.id.loginFragment)?.navigate(R.id.action_loginFragment_to_homeFragment)
+                        progressBar2.isVisible = false
+                    }
                 }
             }
         }
