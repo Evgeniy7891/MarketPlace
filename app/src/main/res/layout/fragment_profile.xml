@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_profile"
+            style="@style/MontserratStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_back" />
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/photo"
+            app:layout_constraintEnd_toEndOf="@+id/tv_profile"
+            app:layout_constraintStart_toStartOf="@+id/tv_profile"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile" />
+
+        <TextView
+            android:id="@+id/tv_change_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/change_photo"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_photo"
+            app:layout_constraintStart_toStartOf="@+id/iv_photo"
+            app:layout_constraintTop_toBottomOf="@+id/iv_photo" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/MontserratStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/satria_adhi_pradana"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_change_photo"
+            app:layout_constraintStart_toStartOf="@+id/tv_change_photo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_change_photo" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_upload"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button"
+            android:drawableStart="@drawable/ic_up"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:text="@string/upload_item"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <ImageButton
+            android:id="@+id/btn_trade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ic_card"
+            app:layout_constraintStart_toStartOf="@+id/btn_upload"
+            app:layout_constraintTop_toBottomOf="@+id/btn_upload" />
+
+        <TextView
+            android:id="@+id/tv_trade"
+            style="@style/ProfileMonserratText"
+            android:text="@string/trade_store"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_trade"
+            app:layout_constraintStart_toEndOf="@+id/btn_trade"
+            app:layout_constraintTop_toTopOf="@+id/btn_trade" />
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/ic_next"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_trade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_trade" />
+
+
+        <ImageButton
+            android:id="@+id/btn_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_card"
+            app:layout_constraintStart_toStartOf="@+id/btn_trade"
+            app:layout_constraintTop_toBottomOf="@+id/btn_trade" />
+
+        <TextView
+            android:id="@+id/tv_payment"
+            style="@style/ProfileMonserratText"
+            android:text="@string/payment_method"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_payment"
+            app:layout_constraintStart_toEndOf="@+id/btn_payment"
+            app:layout_constraintTop_toTopOf="@+id/btn_payment" />
+
+        <ImageButton
+            android:id="@+id/btn_next_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/ic_next"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_payment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_payment" />
+
+        <ImageButton
+            android:id="@+id/btn_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_card"
+            app:layout_constraintStart_toStartOf="@+id/btn_payment"
+            app:layout_constraintTop_toBottomOf="@+id/btn_payment" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            style="@style/ProfileMonserratText"
+            android:text="@string/balance"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_balance"
+            app:layout_constraintStart_toEndOf="@+id/btn_balance"
+            app:layout_constraintTop_toTopOf="@+id/btn_balance" />
+
+        <TextView
+            android:id="@+id/btn_next_balance"
+            style="@style/ProfileMonserratText"
+            android:layout_marginEnd="45dp"
+            android:text="@string/_1593"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_balance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_balance" />
+
+        <ImageButton
+            android:id="@+id/btn_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_card"
+            app:layout_constraintStart_toStartOf="@+id/btn_balance"
+            app:layout_constraintTop_toBottomOf="@+id/btn_balance" />
+
+        <TextView
+            android:id="@+id/tv_history"
+            style="@style/ProfileMonserratText"
+            android:text="@string/trade_history"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_history"
+            app:layout_constraintStart_toEndOf="@+id/btn_history"
+            app:layout_constraintTop_toTopOf="@+id/btn_history" />
+
+        <ImageButton
+            android:id="@+id/btn_next_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/ic_next"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_history"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_history" />
+
+        <ImageButton
+            android:id="@+id/btn_restore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_back_circus"
+            android:src="@drawable/ic_restore"
+            app:layout_constraintStart_toStartOf="@+id/btn_history"
+            app:layout_constraintTop_toBottomOf="@+id/btn_history" />
+
+        <TextView
+            android:id="@+id/tv_restore"
+            style="@style/ProfileMonserratText"
+            android:text="@string/restore_purchase"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_restore"
+            app:layout_constraintStart_toEndOf="@+id/btn_restore"
+            app:layout_constraintTop_toTopOf="@+id/btn_restore" />
+
+        <ImageButton
+            android:id="@+id/btn_next_restore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/ic_next"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_restore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_restore" />
+
+        <ImageButton
+            android:id="@+id/btn_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_back_circus"
+            android:src="@drawable/ic_help"
+            app:layout_constraintStart_toStartOf="@+id/btn_restore"
+            app:layout_constraintTop_toBottomOf="@+id/btn_restore" />
+
+        <TextView
+            android:id="@+id/tv_help"
+            style="@style/ProfileMonserratText"
+            android:text="@string/help"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_help"
+            app:layout_constraintStart_toEndOf="@+id/btn_help"
+            app:layout_constraintTop_toTopOf="@+id/btn_help" />
+
+        <ImageButton
+            android:id="@+id/btn_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/ic_back_circus"
+            android:src="@drawable/ic_log_out"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_help"
+            app:layout_constraintTop_toBottomOf="@+id/btn_help" />
+
+        <TextView
+            android:id="@+id/tv_log_out"
+            style="@style/ProfileMonserratText"
+            android:text="@string/log_out"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_log_out"
+            app:layout_constraintStart_toEndOf="@+id/btn_log_out"
+            app:layout_constraintTop_toTopOf="@+id/btn_log_out" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

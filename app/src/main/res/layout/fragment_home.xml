@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.home.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btn_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/ic_align_justify"
+                android:padding="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title_start"
+                style="@style/MontserratStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="4dp"
+                android:text="@string/trade_by"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_menu"
+                app:layout_constraintEnd_toStartOf="@+id/btn_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_menu" />
+
+            <TextView
+                android:id="@+id/tv_title_end"
+                style="@style/MontserratStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bata"
+                android:textColor="#4E55D7"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title_start"
+                app:layout_constraintStart_toEndOf="@+id/tv_title_start"
+                app:layout_constraintTop_toTopOf="@+id/tv_title_start" />
+
+            <ImageButton
+                android:id="@+id/btn_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="47dp"
+                android:background="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title_end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title_end" />
+
+            <ImageButton
+                android:id="@+id/btn_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/ic_location"
+                app:layout_constraintBottom_toBottomOf="@id/tv_locations"
+                app:layout_constraintStart_toEndOf="@+id/tv_locations"
+                app:layout_constraintTop_toTopOf="@+id/tv_locations" />
+
+            <TextView
+                android:id="@+id/tv_locations"
+                android:layout_width="48dp"
+                android:layout_height="11dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/locations"
+                android:textColor="#5B5B5B"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/btn_logo"
+                app:layout_constraintStart_toStartOf="@+id/btn_logo"
+                app:layout_constraintTop_toBottomOf="@+id/btn_logo" />
+
+            <EditText
+                android:id="@+id/et_search_looking"
+                android:layout_width="262dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="34dp"
+                android:background="@drawable/edit_text_home"
+                android:drawableEnd="@drawable/ic_search"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_horizontal"
+                android:hint="@string/what_are_you_looking_for"
+                android:paddingStart="12dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="4dp"
+                android:textColor="#5B5B5B"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_start" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_search_looking"
+                tools:listitem="@layout/item_category" />
+
+            <TextView
+                android:id="@+id/tv_latest"
+                style="@style/HomePoppinsText"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/latest"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycler_category" />
+
+            <TextView
+                android:id="@+id/tv_view_all_latest"
+                style="@style/TextViewAllHome"
+                android:layout_marginBottom="14dp"
+                android:text="@string/view_all"
+                app:layout_constraintBottom_toTopOf="@+id/recycler_latest"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_latest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_latest"
+                tools:listitem="@layout/tem_latest" />
+
+            <TextView
+                android:id="@+id/tv_flash"
+                style="@style/HomePoppinsText"
+                android:layout_marginTop="32dp"
+                android:text="@string/flash_sale"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycler_latest" />
+
+            <TextView
+                android:id="@+id/tv_view_all_sale"
+                style="@style/TextViewAllHome"
+                android:layout_marginBottom="14dp"
+                android:text="@string/view_all"
+                app:layout_constraintBottom_toTopOf="@+id/recycler_flash"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_flash"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_flash"
+                tools:listitem="@layout/item_flash" />
+
+            <TextView
+                android:id="@+id/tv_brands"
+                style="@style/HomePoppinsText"
+                android:layout_marginTop="32dp"
+                android:text="@string/brands"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycler_flash" />
+
+            <TextView
+                android:id="@+id/tv_view_all_brands"
+                style="@style/TextViewAllHome"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/view_all"
+                app:layout_constraintBottom_toTopOf="@+id/recycler_brands"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_brands"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="75dp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_brands"
+                tools:listitem="@layout/tem_latest" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.authorization.LoginFragment">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        style="@style/MontserratStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="@string/welcome_back"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_first_name"
+        app:layout_constraintEnd_toEndOf="@+id/et_first_name"
+        app:layout_constraintStart_toStartOf="@+id/et_first_name" />
+
+    <EditText
+        android:id="@+id/et_first_name"
+        style="@style/EditTextStyle"
+        android:background="@drawable/edit_text"
+        android:hint="@string/first_name"
+        android:paddingStart="30dp"
+        android:paddingEnd="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_password"
+        app:layout_constraintEnd_toEndOf="@+id/et_password"
+        app:layout_constraintStart_toStartOf="@+id/et_password" />
+
+    <EditText
+        android:id="@+id/et_password"
+        style="@style/EditTextStyle"
+        android:paddingStart="30dp"
+        android:hint="@string/password"
+        android:drawableEnd="@drawable/ic_eye_off"
+        android:paddingEnd="12dp"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:layout_width="290dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="99dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/et_password"
+        app:layout_constraintStart_toStartOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
