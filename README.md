@@ -1,5 +1,5 @@
 # [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=MarketPlace)](https://git.io/typing-svg)
-## **Android приложение интернет магазина**
+## **Android приложение интернет магазина (First name - Satria , password - 1234)**
 ### Видео
 https://user-images.githubusercontent.com/99983028/224652727-c8f5052d-ddfb-4bb5-8b75-3b65fb8ee73a.mp4
 
