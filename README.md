@@ -5,7 +5,7 @@ https://user-images.githubusercontent.com/99983028/224652727-c8f5052d-ddfb-4bb5-
 
 **Стек технологий:**
 ---------------------------------------
-+ паттерн проектирования (MVVM) 
++ Многомодульность 
 + Clean architecture (NetWork / Local Data -> Repository -> UseCase -> ViewModel / LiveData -> Fragments / Activity)
 + инструменты для работы с API (Retrofit2, OkHttp3, Gson)
 + Coroutines
@@ -18,6 +18,6 @@ https://user-images.githubusercontent.com/99983028/224652727-c8f5052d-ddfb-4bb5-
 + SOLID
 + хранения данных в Room
 + ViewBinding
-+ Обработка ошибок через NetWorkState, safeApiCall, try and catch
++ обработка ошибок через NetWorkState, safeApiCall, try and catch
 + Bottom navigation
 + стандартная анимация при переходах фрагментов
